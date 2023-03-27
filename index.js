@@ -5,6 +5,16 @@ function isPalindrome(word) {
 /* 
   Add your pseudocode here
 */
+function isPalindrome(str) {
+  // Convert the string to lowercase and remove non-alphanumeric characters
+  str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Reverse the string
+  var reverseStr = str.split('').reverse().join('');
+
+  // Check if the original and reversed strings are equal
+  return str === reverseStr;
+}
 
 /*
   Add written explanation of your solution here
